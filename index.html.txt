@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ada Contabilidade | Contabilidade em Contagem - MG</title>
+
+    <meta name="description" content="Ada Contabilidade - 3A Inteligencia Contabil LTDA. Serviços de contabilidade, assessoria contábil, fiscal e empresarial em Contagem - MG.">
+    <meta name="keywords" content="contabilidade, contador, contabilidade em Contagem, Ada Contabilidade, escritório contábil, Minas Gerais">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0b5ed7;
+            --primary-dark: #084298;
+            --secondary: #12b886;
+            --dark: #10233f;
+            --text: #536174;
+            --light: #f5f8fc;
+            --white: #ffffff;
+            --border: #e5ebf3;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--dark);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar {
+            padding: 18px 0;
+            background: rgba(255,255,255,.96);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,.05);
+        }
+
+        .navbar-brand {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            font-size: 1.45rem;
+            color: var(--dark);
+        }
+
+        .navbar-brand span {
+            color: var(--primary);
+        }
+
+        .nav-link {
+            color: #43536a;
+            font-weight: 600;
+            margin-left: 18px;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .btn-primary-custom {
+            background: var(--primary);
+            border: none;
+            color: #fff;
+            padding: 13px 24px;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .btn-primary-custom:hover {
+            background: var(--primary-dark);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(11,94,215,.22);
+        }
+
+        .btn-outline-custom {
+            border: 2px solid rgba(255,255,255,.7);
+            color: #fff;
+            padding: 12px 23px;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .btn-outline-custom:hover {
+            background: #fff;
+            color: var(--primary);
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0 100px;
+            background:
+                radial-gradient(circle at 85% 20%, rgba(18,184,134,.22), transparent 30%),
+                radial-gradient(circle at 10% 80%, rgba(11,94,215,.22), transparent 30%),
+                linear-gradient(135deg, #09264d 0%, #0b4f9c 100%);
+            color: #fff;
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -2px;
+        }
+
+        .hero p {
+            color: rgba(255,255,255,.82);
+            font-size: 1.1rem;
+            max-width: 650px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,.1);
+            border: 1px solid rgba(255,255,255,.2);
+            padding: 8px 14px;
+            border-radius: 50px;
+            font-size: .85rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,.1);
+            border: 1px solid rgba(255,255,255,.16);
+            border-radius: 24px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 25px 60px rgba(0,0,0,.2);
+        }
+
+        .hero-card .icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            background: rgba(18,184,134,.18);
+            color: #62e2ba;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-card h4 {
+            color: #fff;
+        }
+
+        .hero-card p {
+            font-size: .92rem;
+            margin-bottom: 0;
+        }
+
+        /* SECTION */
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-light {
+            background: var(--light);
+        }
+
+        .section-title {
+            max-width: 700px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .section-title .small-title {
+            color: var(--primary);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: .8rem;
+            margin-bottom: 12px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--text);
+            margin: 0;
+        }
+
+        /* SERVICES */
+        .service-card {
+            height: 100%;
+            padding: 32px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(11,94,215,.25);
+            box-shadow: 0 18px 45px rgba(25,50,80,.09);
+        }
+
+        .service-icon {
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eaf2ff;
+            color: var(--primary);
+            border-radius: 15px;
+            font-size: 1.5rem;
+            margin-bottom: 22px;
+        }
+
+        .service-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            margin-bottom: 0;
+            font-size: .94rem;
+        }
+
+        /* ABOUT */
+        .about-box {
+            background: #fff;
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: 0 15px 40px rgba(30,60,90,.06);
+        }
+
+        .check-list {
+            padding: 0;
+            list-style: none;
+        }
+
+        .check-list li {
+            margin-bottom: 13px;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .check-list i {
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+
+        /* STATS */
+        .stats {
+            background: var(--dark);
+            padding: 55px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: #fff;
+        }
+
+        .stat-item i {
+            color: #4ed7ae;
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+
+        .stat-number {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .stat-label {
+            color: rgba(255,255,255,.65);
+            font-size: .9rem;
+        }
+
+        /* COMPANY DATA */
+        .data-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 17px 22px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .data-row:last-child {
+            border-bottom: none;
+        }
+
+        .data-label {
+            color: #78879a;
+            font-size: .9rem;
+        }
+
+        .data-value {
+            color: var(--dark);
+            font-weight: 600;
+            text-align: right;
+        }
+
+        /* TEAM */
+        .team-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 30px;
+            text-align: center;
+            height: 100%;
+        }
+
+        .team-avatar {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0b5ed7, #12b886);
+            color: #fff;
+            font-size: 1.8rem;
+        }
+
+        .team-card h4 {
+            font-size: 1.05rem;
+        }
+
+        .team-card span {
+            color: var(--primary);
+            font-size: .85rem;
+            font-weight: 600;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            border-radius: 24px;
+            padding: 50px;
+            background:
+                radial-gradient(circle at 90% 10%, rgba(18,184,134,.2), transparent 25%),
+                linear-gradient(135deg, #09264d, #0b5ed7);
+            color: #fff;
+        }
+
+        .contact-box h2 {
+            color: #fff;
+            font-weight: 800;
+        }
+
+        .contact-box p {
+            color: rgba(255,255,255,.75);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 22px;
+        }
+
+        .contact-icon {
+            min-width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: rgba(255,255,255,.12);
+            color: #6de4bd;
+            font-size: 1.2rem;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #fff;
+            margin-bottom: 3px;
+        }
+
+        .contact-item span,
+        .contact-item a {
+            color: rgba(255,255,255,.72);
+        }
+
+        .map-box {
+            min-height: 350px;
+            height: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #eaf0f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .map-box i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 80px 0;
+            background: var(--light);
+        }
+
+        .cta h2 {
+            font-weight: 800;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #071a33;
+            color: rgba(255,255,255,.65);
+            padding: 60px 0 25px;
+        }
+
+        footer h5 {
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        footer a {
+            color: rgba(255,255,255,.65);
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        .footer-brand {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .footer-brand span {
+            color: #4ed7ae;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.1);
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: .82rem;
+        }
+
+        /* FLOATING WHATSAPP */
+        .floating-contact {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25d366;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+            z-index: 999;
+            transition: .3s;
+        }
+
+        .floating-contact:hover {
+            color: #fff;
+            transform: scale(1.08);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 991px) {
+            .navbar .btn-primary-custom {
+                margin-top: 15px;
+            }
+
+            .hero {
+                padding: 90px 0 70px;
+            }
+
+            .hero-card {
+                margin-top: 40px;
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .contact-box {
+                padding: 30px 22px;
+            }
+
+            .data-row {
+                flex-direction: column;
+                gap: 3px;
+            }
+
+            .data-value {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#inicio">
+            Ada <span>Contabilidade</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#empresa">Empresa</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+
+                <li class="nav-item ms-lg-3">
+                    <a href="tel:+553133981573" class="btn btn-primary-custom">
+                        <i class="bi bi-telephone-fill me-2"></i>
+                        Fale conosco
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-7">
+
+                <div class="hero-badge">
+                    <i class="bi bi-patch-check-fill"></i>
+                    Empresa ativa desde 2005
+                </div>
+
+                <h1>
+                    Contabilidade que ajuda sua empresa a crescer.
+                </h1>
+
+                <p class="mt-4">
+                    Soluções contábeis para empresas que buscam
+                    organização, segurança e tranquilidade para
+                    cuidar dos seus negócios.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 mt-4">
+
+                    <a href="#contato" class="btn btn-light btn-lg px-4">
+                        <i class="bi bi-chat-dots-fill me-2"></i>
+                        Entre em contato
+                    </a>
+
+                    <a href="#servicos" class="btn btn-outline-custom btn-lg">
+                        Conheça nossos serviços
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <div class="hero-card">
+
+                    <div class="icon">
+                        <i class="bi bi-calculator-fill"></i>
+                    </div>
+
+                    <h4>
+                        Inteligência contábil para sua empresa
+                    </h4>
+
+                    <p>
+                        A Ada Contabilidade atua com foco em
+                        atividades contábeis, oferecendo suporte
+                        para uma gestão empresarial mais organizada
+                        e eficiente.
+                    </p>
+
+                    <div class="mt-4 d-flex align-items-center gap-2">
+                        <i class="bi bi-check-circle-fill text-success"></i>
+                        <span>Atendimento profissional</span>
+                    </div>
+
+                    <div class="mt-2 d-flex align-items-center gap-2">
+                        <i class="bi bi-check-circle-fill text-success"></i>
+                        <span>Empresa ativa</span>
+                    </div>
+
+                    <div class="mt-2 d-flex align-items-center gap-2">
+                        <i class="bi bi-check-circle-fill text-success"></i>
+                        <span>Mais de 20 anos de atuação</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVIÇOS -->
+<section class="section" id="servicos">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">
+                Nossos serviços
+            </div>
+
+            <h2>
+                Soluções para cuidar da sua contabilidade
+            </h2>
+
+            <p>
+                Conte com uma estrutura contábil para manter
+                sua empresa organizada e preparada para tomar
+                melhores decisões.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-calculator"></i>
+                    </div>
+
+                    <h4>Contabilidade</h4>
+
+                    <p>
+                        Escrituração e acompanhamento das
+                        informações contábeis da empresa,
+                        contribuindo para uma gestão organizada.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <h4>Obrigações Contábeis</h4>
+
+                    <p>
+                        Organização das informações necessárias
+                        para o cumprimento das obrigações da
+                        empresa.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h4>Informações Gerenciais</h4>
+
+                    <p>
+                        Informações contábeis que auxiliam
+                        empresários na compreensão e gestão
+                        do negócio.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+
+                    <h4>Assessoria Empresarial</h4>
+
+                    <p>
+                        Apoio contábil para empresas que desejam
+                        manter seus processos administrativos
+                        mais organizados.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h4>Segurança Contábil</h4>
+
+                    <p>
+                        Acompanhamento das informações contábeis
+                        para proporcionar maior segurança na
+                        administração empresarial.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+
+                    <h4>Inteligência Contábil</h4>
+
+                    <p>
+                        Transformamos informações contábeis em
+                        conhecimento para apoiar decisões mais
+                        conscientes.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+<section class="stats">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-item">
+                    <i class="bi bi-calendar-check"></i>
+                    <div class="stat-number">2005</div>
+                    <div class="stat-label">Ano de fundação</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-item">
+                    <i class="bi bi-award"></i>
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Anos de atuação</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-item">
+                    <i class="bi bi-check-circle"></i>
+                    <div class="stat-number">Ativa</div>
+                    <div class="stat-label">Situação cadastral</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-item">
+                    <i class="bi bi-geo-alt"></i>
+                    <div class="stat-number">MG</div>
+                    <div class="stat-label">Contagem</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SOBRE -->
+<section class="section section-light" id="sobre">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="section-title text-start mb-4">
+
+                    <div class="small-title">
+                        Sobre a Ada Contabilidade
+                    </div>
+
+                    <h2>
+                        Experiência para cuidar da sua empresa.
+                    </h2>
+
+                </div>
+
+                <p>
+                    A <strong>Ada Contabilidade</strong>, razão social
+                    <strong>3A Inteligencia Contabil LTDA</strong>,
+                    atua no segmento de atividades de contabilidade
+                    desde 30 de março de 2005.
+                </p>
+
+                <p>
+                    Localizada em Contagem, Minas Gerais, a empresa
+                    possui situação cadastral ativa e tem como
+                    atividade principal o CNAE
+                    <strong>69.20-6-01 - Atividades de contabilidade.</strong>
+                </p>
+
+                <ul class="check-list mt-4">
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Mais de duas décadas de atuação.</span>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Empresa optante pelo Simples Nacional.</span>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Registro profissional no CRC de Minas Gerais.</span>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Atendimento para empresas e empreendedores.</span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="about-box">
+
+                    <div class="d-flex gap-3 mb-4">
+
+                        <div class="service-icon mb-0">
+                            <i class="bi bi-buildings"></i>
+                        </div>
+
+                        <div>
+                            <h4 class="mb-1">
+                                3A Inteligencia Contabil LTDA
+                            </h4>
+
+                            <span class="text-muted">
+                                Nome fantasia: Ada Contabilidade
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Nossa proposta é oferecer uma visão contábil
+                        clara e organizada para que o empresário possa
+                        concentrar seus esforços no crescimento do
+                        próprio negócio.
+                    </p>
+
+                    <hr>
+
+                    <div class="row g-3">
+
+                        <div class="col-6">
+                            <small class="text-muted d-block">
+                                CNPJ
+                            </small>
+                            <strong>
+                                07.294.301/0001-14
+                            </strong>
+                        </div>
+
+                        <div class="col-6">
+                            <small class="text-muted d-block">
+                                CRC
+                            </small>
+                            <strong>
+                                MG-011164/O
+                            </strong>
+                        </div>
+
+                        <div class="col-6">
+                            <small class="text-muted d-block">
+                                Porte
+                            </small>
+                            <strong>
+                                Empresa de Pequeno Porte
+                            </strong>
+                        </div>
+
+                        <div class="col-6">
+                            <small class="text-muted d-block">
+                                Natureza Jurídica
+                            </small>
+                            <strong>
+                                Sociedade Empresária Limitada
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DADOS DA EMPRESA -->
+<section class="section" id="empresa">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">
+                Informações empresariais
+            </div>
+
+            <h2>
+                Dados da empresa
+            </h2>
+
+            <p>
+                Informações cadastrais da Ada Contabilidade.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+
+                <div class="data-card">
+
+                    <div class="data-row">
+                        <span class="data-label">Razão Social</span>
+                        <span class="data-value">
+                            3A Inteligencia Contabil LTDA
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Nome Fantasia</span>
+                        <span class="data-value">
+                            Ada Contabilidade
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">CNPJ</span>
+                        <span class="data-value">
+                            07.294.301/0001-14
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Data de abertura</span>
+                        <span class="data-value">
+                            30/03/2005
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Porte</span>
+                        <span class="data-value">
+                            Empresa de Pequeno Porte
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Natureza Jurídica</span>
+                        <span class="data-value">
+                            Sociedade Empresária Limitada
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="data-card">
+
+                    <div class="data-row">
+                        <span class="data-label">Situação</span>
+                        <span class="data-value text-success">
+                            <i class="bi bi-check-circle-fill me-1"></i>
+                            Ativa
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Simples Nacional</span>
+                        <span class="data-value">
+                            Sim
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Opção pelo Simples</span>
+                        <span class="data-value">
+                            01/07/2007
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Capital Social</span>
+                        <span class="data-value">
+                            R$ 3.000,00
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Tipo</span>
+                        <span class="data-value">
+                            Matriz
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">CRC</span>
+                        <span class="data-value">
+                            MG-011164/O
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ATIVIDADE -->
+<section class="section section-light">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5">
+
+                <div class="service-icon" style="width:75px;height:75px;font-size:2rem;">
+                    <i class="bi bi-bar-chart-line-fill"></i>
+                </div>
+
+                <h2 class="mt-3">
+                    Nossa atividade principal
+                </h2>
+
+                <p>
+                    A Ada Contabilidade tem como atividade principal
+                    registrada a prestação de serviços relacionados
+                    às atividades de contabilidade.
+                </p>
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <div class="about-box">
+
+                    <div class="d-flex align-items-center gap-3">
+
+                        <div class="service-icon mb-0">
+                            <i class="bi bi-file-earmark-bar-graph"></i>
+                        </div>
+
+                        <div>
+                            <small class="text-muted">
+                                CNAE PRINCIPAL
+                            </small>
+
+                            <h4 class="mb-1">
+                                69.20-6-01
+                            </h4>
+
+                            <p class="mb-0">
+                                Atividades de contabilidade
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SÓCIOS -->
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="small-title">
+                Nossa liderança
+            </div>
+
+            <h2>
+                Sócios-Administradores
+            </h2>
+
+            <p>
+                Conheça os responsáveis pela administração
+                da empresa.
+            </p>
+
+        </div>
+
+        <div class="row justify-content-center g-4">
+
+            <div class="col-md-5">
+
+                <div class="team-card">
+
+                    <div class="team-avatar">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+
+                    <h4>
+                        Alysson Cedro de Araujo
+                    </h4>
+
+                    <span>
+                        Sócio-Administrador
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-5">
+
+                <div class="team-card">
+
+                    <div class="team-avatar">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+
+                    <h4>
+                        Anderson Cedro de Araujo
+                    </h4>
+
+                    <span>
+                        Sócio-Administrador
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="text-center mt-4 text-muted">
+            <i class="bi bi-person-badge me-2"></i>
+            Qualificação do responsável pela empresa:
+            <strong>Sócio-Administrador</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTATO -->
+<section class="section section-light" id="contato">
+
+    <div class="container">
+
+        <div class="row g-4 align-items-stretch">
+
+            <div class="col-lg-6">
+
+                <div class="contact-box h-100">
+
+                    <div class="small-title text-white mb-3">
+                        Fale conosco
+                    </div>
+
+                    <h2>
+                        Vamos conversar sobre sua empresa?
+                    </h2>
+
+                    <p class="mt-3 mb-4">
+                        Entre em contato com a Ada Contabilidade
+                        para obter mais informações sobre nossos
+                        serviços e atendimento.
+                    </p>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+
+                        <div>
+                            <strong>Telefone</strong>
+
+                            <a href="tel:+553133981573">
+                                (31) 3398-1573
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+
+                        <div>
+                            <strong>E-mail</strong>
+
+                            <a href="mailto:top0928341002@gmail.com">
+                                top0928341002@gmail.com
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+
+                        <div>
+                            <strong>Endereço</strong>
+
+                            <span>
+                                Avenida Benjamim Camargos, 395 -
+                                Sala C<br>
+                                Alvorada - Contagem/MG<br>
+                                CEP 32042-250
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="d-flex flex-wrap gap-2 mt-4">
+
+                        <a href="tel:+553133981573"
+                           class="btn btn-light">
+
+                            <i class="bi bi-telephone-fill me-2"></i>
+                            Ligar agora
+
+                        </a>
+
+                        <a href="mailto:top0928341002@gmail.com"
+                           class="btn btn-outline-custom">
+
+                            <i class="bi bi-envelope-fill me-2"></i>
+                            Enviar e-mail
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="map-box">
+
+                    <i class="bi bi-geo-alt-fill"></i>
+
+                    <h4>
+                        Estamos em Contagem - MG
+                    </h4>
+
+                    <p>
+                        Avenida Benjamim Camargos, 395
+                        Sala C - Alvorada
+                    </p>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Avenida+Benjamim+Camargos+395+Contagem+MG"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-primary-custom">
+
+                        <i class="bi bi-map-fill me-2"></i>
+                        Ver no Google Maps
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+
+    <div class="container text-center">
+
+        <div class="section-title mb-4">
+
+            <div class="small-title">
+                Ada Contabilidade
+            </div>
+
+            <h2>
+                Sua empresa merece uma contabilidade parceira.
+            </h2>
+
+            <p>
+                Organização, informação e confiança para
+                apoiar o crescimento do seu negócio.
+            </p>
+
+        </div>
+
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+
+            <a href="tel:+553133981573"
+               class="btn btn-primary-custom btn-lg">
+
+                <i class="bi bi-telephone-fill me-2"></i>
+                (31) 3398-1573
+
+            </a>
+
+            <a href="mailto:top0928341002@gmail.com"
+               class="btn btn-outline-primary btn-lg">
+
+                <i class="bi bi-envelope-fill me-2"></i>
+                Fale por e-mail
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <div class="footer-brand">
+                    Ada <span>Contabilidade</span>
+                </div>
+
+                <p class="mt-3">
+                    3A Inteligencia Contabil LTDA
+                </p>
+
+                <p>
+                    Contabilidade com experiência,
+                    organização e compromisso para
+                    empresas de Contagem e região.
+                </p>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h5>Menu</h5>
+
+                <div class="d-flex flex-column gap-2">
+                    <a href="#inicio">Início</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#empresa">Empresa</a>
+                    <a href="#contato">Contato</a>
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h5>Empresa</h5>
+
+                <div class="d-flex flex-column gap-2">
+                    <span>CNPJ: 07.294.301/0001-14</span>
+                    <span>CRC: MG-011164/O</span>
+                    <span>Simples Nacional</span>
+                    <span>Empresa ativa</span>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <h5>Contato</h5>
+
+                <div class="d-flex flex-column gap-2">
+
+                    <a href="tel:+553133981573">
+                        <i class="bi bi-telephone me-2"></i>
+                        (31) 3398-1573
+                    </a>
+
+                    <a href="mailto:top0928341002@gmail.com">
+                        <i class="bi bi-envelope me-2"></i>
+                        top0928341002@gmail.com
+                    </a>
+
+                    <span>
+                        <i class="bi bi-geo-alt me-2"></i>
+                        Contagem - MG
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom text-center">
+
+            <p class="mb-1">
+                © 2026 Ada Contabilidade - 3A Inteligencia Contabil LTDA.
+                Todos os direitos reservados.
+            </p>
+
+            <p class="mb-0">
+                CNPJ 07.294.301/0001-14
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- BOTÃO FLUTUANTE -->
+<a
+    href="tel:+553133981573"
+    class="floating-contact"
+    title="Ligar para Ada Contabilidade">
+
+    <i class="bi bi-telephone-fill"></i>
+
+</a>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
